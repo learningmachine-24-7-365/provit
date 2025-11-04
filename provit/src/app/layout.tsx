@@ -1,16 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Logo from "../components/icon/Logo";
+import { BG_COLOR, TOOLBAR_MIN_HEIGHT } from "../constants/styles";
+import { MENU_ITEMS } from "../constants/menu";
+import MenuItem from "../components/ui/Menuitem";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,10 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="ko">
+      <body className={`font-medium flex flex-col h-screen ${BG_COLOR} pt-2`}>
+        <div className={`${TOOLBAR_MIN_HEIGHT} flex items-center px-6 gap-4`}>
+          <Logo />
+          <div className="flex gap-1">
+            {MENU_ITEMS.map((item, index) => (
+              <MenuItem key={index} icon={item.icon} label={item.label} href={item.href} />
+            ))}
+          </div>
+        </div>
         {children}
       </body>
     </html>
