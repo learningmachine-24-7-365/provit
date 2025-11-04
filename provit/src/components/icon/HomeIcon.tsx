@@ -1,12 +1,8 @@
 'use client';
 
-interface HomeIconProps {
-  size?: number;
-  className?: string;
-  isSelected?: boolean;
-}
+import { SelectableIconProps } from './types';
 
-export default function HomeIcon({ size = 24, className, isSelected = false }: HomeIconProps) {
+export default function HomeIcon({ size = 24, className, isSelected = false }: SelectableIconProps) {
   if (isSelected) {
     return (
       <svg 

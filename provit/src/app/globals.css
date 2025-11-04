@@ -94,3 +94,14 @@ body {
   color: var(--foreground);
   font-family: 'WANTEDSANSVARIABLE', 'SANDOLL GOTHICNEO2', Arial, Helvetica, sans-serif;
 }
+
+* {
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
+button, input, textarea {
+  font-family: inherit;
+  outline: none;
+}

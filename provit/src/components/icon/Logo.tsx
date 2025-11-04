@@ -1,6 +1,8 @@
 'use client';
 
-export default function Logo({ size = 32 }: { size?: number }) {
+import { LogoProps } from './types';
+
+export default function Logo({ size = 32 }: LogoProps) {
     return (
         <svg width={size} height={size} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 12C20 10.4177 19.5308 8.87103 18.6518 7.55544C17.7727 6.23984 16.5233 5.21446 15.0615 4.60896C13.5997 4.00346 11.9911 3.84504 10.4393 4.15372C8.88743 4.4624 7.46197 5.22433 6.34315 6.34315C5.22433 7.46197 4.4624 8.88743 4.15372 10.4393C3.84504 11.9911 4.00346 13.5997 4.60896 15.0615C5.21446 16.5233 6.23985 17.7727 7.55544 18.6518C8.87103 19.5308 10.4177 20 12 20V12H20Z" fill="#0CDAE9" />

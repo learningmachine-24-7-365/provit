@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Logo from "../components/icon/Logo";
 import { BG_COLOR, TOOLBAR_MIN_HEIGHT } from "../constants/styles";
-import { MENU_ITEMS } from "../constants/menu";
+import { ACTION_ITEMS, MENU_ITEMS } from "../constants/menu";
 import MenuItem from "../components/ui/Menuitem";
+import ActionButton from "@/components/ui/ActionButton";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,12 +19,19 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={`font-medium flex flex-col h-screen ${BG_COLOR} pt-2`}>
-        <div className={`${TOOLBAR_MIN_HEIGHT} flex items-center px-6 gap-4`}>
+        <div className={`${TOOLBAR_MIN_HEIGHT} flex items-center pl-6 pr-4 gap-4`}>
           <Logo />
           <div className="flex gap-1">
             {MENU_ITEMS.map((item, index) => (
               <MenuItem key={index} icon={item.icon} label={item.label} href={item.href} />
             ))}
+          </div>
+          <div className="flex-1 flex justify-end items-center gap-2">
+            <div className="flex gap-1 items-center">
+              {ACTION_ITEMS.map((action, index) => (
+                <ActionButton key={index} onClick={action.onClick} icon={action.icon} />
+              ))}
+            </div>
           </div>
         </div>
         {children}

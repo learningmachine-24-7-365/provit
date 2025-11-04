@@ -1,5 +1,5 @@
-import { MenuItemProps } from "../components/ui/types";
-import { HomeIcon, ReportIcon, TargetIcon, TimelineIcon } from "../components/icon";
+import { ActionButtonProps, MenuItemProps } from "../components/ui/types";
+import { HomeIcon, ReportIcon, TargetIcon, TimelineIcon, AdjustmentIcon, NotificationIcon,  } from "../components/icon";
 
 export const MENU_ITEMS: MenuItemProps[] = [
     {
@@ -21,5 +21,14 @@ export const MENU_ITEMS: MenuItemProps[] = [
         icon: ReportIcon,
         label: "리포트",
         href: "/reports",
+    }
+]
+
+export const ACTION_ITEMS: ActionButtonProps[] = [
+    {
+        icon: AdjustmentIcon
+    },
+    {
+        icon: NotificationIcon
     }
 ]

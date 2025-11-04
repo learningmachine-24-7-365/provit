@@ -5,3 +5,5 @@ export { default as HomeIcon } from './HomeIcon';
 export { default as ReportIcon } from './ReportIcon';
 export { default as TargetIcon } from './TargetIcon';
 export { default as TimelineIcon } from './TimelineIcon';
+export { default as NotificationIcon } from './NotificationIcon';
+export { default as AdjustmentIcon } from './AdjustmentIcon';

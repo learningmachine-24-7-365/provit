@@ -4,3 +4,8 @@ export interface MenuItemProps {
     href: string;
     subActions?: React.ReactNode;
 }
+export interface ActionButtonProps {
+    onClick?: () => void;
+    label?: string;
+    icon: React.ComponentType<any>;
+}

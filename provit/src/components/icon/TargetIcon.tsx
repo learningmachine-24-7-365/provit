@@ -1,12 +1,8 @@
 'use client';
 
-interface TargetIconProps {
-  size?: number;
-  className?: string;
-  isSelected?: boolean;
-}
+import { SelectableIconProps } from './types';
 
-export default function TargetIcon({ size = 24, className, isSelected = false }: TargetIconProps) {
+export default function TargetIcon({ size = 24, className, isSelected = false }: SelectableIconProps) {
   if (isSelected) {
     return (
       <svg 

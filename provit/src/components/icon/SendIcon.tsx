@@ -1,11 +1,8 @@
 'use client';
 
-interface SendIconProps {
-  size?: number;
-  className?: string;
-}
+import { IconProps } from './types';
 
-export default function SendIcon({ size = 24, className }: SendIconProps) {
+export default function SendIcon({ size = 24, className }: IconProps) {
   return (
     <svg 
       width={size} 

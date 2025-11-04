@@ -1,10 +1,6 @@
 'use client';
 
-interface ChevronIconProps {
-  size?: number;
-  className?: string;
-  rotation?: 0 | 90 | 180 | 270;
-}
+import { ChevronIconProps } from './types';
 
 export default function ChevronIcon({ size = 16, className, rotation = 0 }: ChevronIconProps) {
   return (

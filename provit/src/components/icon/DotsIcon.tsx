@@ -1,11 +1,8 @@
 'use client';
 
-interface DotsIconProps {
-  size?: number;
-  className?: string;
-}
+import { IconProps } from './types';
 
-export default function DotsIcon({ size = 20, className }: DotsIconProps) {
+export default function DotsIcon({ size = 20, className }: IconProps) {
   return (
     <svg 
       width={size} 

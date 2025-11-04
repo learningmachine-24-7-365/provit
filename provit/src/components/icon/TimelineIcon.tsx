@@ -1,12 +1,8 @@
 'use client';
 
-interface TimelineIconProps {
-  size?: number;
-  className?: string;
-  isSelected?: boolean;
-}
+import { SelectableIconProps } from './types';
 
-export default function TimelineIcon({ size = 24, className, isSelected = false }: TimelineIconProps) {
+export default function TimelineIcon({ size = 24, className, isSelected = false }: SelectableIconProps) {
   const strokeWidth = isSelected ? "2" : "1.5";
 
   return (
