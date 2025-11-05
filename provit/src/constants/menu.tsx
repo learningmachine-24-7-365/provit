@@ -9,8 +9,8 @@ export const MENU_ITEMS: MenuItemProps[] = [
     },
     {
         icon: TargetIcon,
-        label: "목표",
-        href: "/goals",
+        label: "루틴",
+        href: "/routines",
     },
     {
         icon: TimelineIcon,
